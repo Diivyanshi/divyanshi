@@ -2,12 +2,12 @@ import pandas as pd
 import streamlit as st 
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-import pandas as pd
-csv_path = r"C:/Users/test/OneDrive/Desktop/study_data.csv"
+import os
 
- 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+csv_path = os.path.join(BASE_DIR, "study_data.csv")
 data = pd.read_csv(csv_path)
-
+ 
 
 st.title("Linear Regression App")
 x = data[["hoursStudied"]]
@@ -29,6 +29,7 @@ st.dataframe(data)
 
  
  
+
 
 
 
