@@ -3,7 +3,12 @@ import streamlit as st
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 import pandas as pd
-data = pd.read_csv(r"C:/Users/test/OneDrive/Desktop/study_data.csv")
+csv_path = r"C:/Users/test/OneDrive/Desktop/study_data.csv"
+
+ 
+data = pd.read_csv(csv_path)
+
+
 st.title("Linear Regression App")
 x = data[["hoursStudied"]]
 y = data["examScore"] 
@@ -24,6 +29,7 @@ st.dataframe(data)
 
  
  
+
 
 
 
